@@ -1,0 +1,90 @@
+﻿<Window x:Class="ScientificCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Scientific Calculator" Height="700" Width="450"
+        Background="#1E1E1E" Foreground="White" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="CalcButton" TargetType="Button">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Margin" Value="4"/>
+            <Setter Property="Background" Value="#2A2A2A"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="10" Background="#1E1E1E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Display -->
+            <RowDefinition Height="*"/>
+            <!-- Buttons -->
+        </Grid.RowDefinitions>
+
+        <!-- DISPLAY -->
+        <TextBox x:Name="Display" Grid.Row="0" FontSize="32"
+                 Background="#1E1E1E" Foreground="White" BorderThickness="0"
+                 HorizontalAlignment="Stretch" VerticalContentAlignment="Center"
+                 TextAlignment="Right" IsReadOnly="True" Margin="0,0,0,20"
+                 Height="70"/>
+
+        <!-- BUTTONS -->
+        <UniformGrid Grid.Row="1" Rows="7" Columns="5" Margin="0">
+            <!-- Row 1 -->
+            <Button Content="2ⁿᵈ" Style="{StaticResource CalcButton}" />
+            <Button Content="π" Style="{StaticResource CalcButton}" />
+            <Button Content="e" Style="{StaticResource CalcButton}" />
+            <Button Content="CE" Style="{StaticResource CalcButton}" />
+            <Button Content="⌫" Style="{StaticResource CalcButton}" />
+
+            <!-- Row 2 -->
+            <Button Content="x²" Style="{StaticResource CalcButton}" />
+            <Button Content="√x" Style="{StaticResource CalcButton}" />
+            <Button Content="|x|" Style="{StaticResource CalcButton}" />
+            <Button Content="exp" Style="{StaticResource CalcButton}" />
+            <Button Content="mod" Style="{StaticResource CalcButton}" />
+
+            <!-- Row 3 -->
+            <Button Content="∛x" Style="{StaticResource CalcButton}" />
+            <Button Content="(" Style="{StaticResource CalcButton}" />
+            <Button Content=")" Style="{StaticResource CalcButton}" />
+            <Button Content="n!" Style="{StaticResource CalcButton}" />
+            <Button Content="÷" Style="{StaticResource CalcButton}" />
+
+            <!-- Row 4 -->
+            <Button Content="xʸ" Style="{StaticResource CalcButton}" />
+            <Button Content="7" Style="{StaticResource CalcButton}" />
+            <Button Content="8" Style="{StaticResource CalcButton}" />
+            <Button Content="9" Style="{StaticResource CalcButton}" />
+            <Button Content="×" Style="{StaticResource CalcButton}" />
+
+            <!-- Row 5 -->
+            <Button Content="10ˣ" Style="{StaticResource CalcButton}" />
+            <Button Content="4" Style="{StaticResource CalcButton}" />
+            <Button Content="5" Style="{StaticResource CalcButton}" />
+            <Button Content="6" Style="{StaticResource CalcButton}" />
+            <Button Content="−" Style="{StaticResource CalcButton}" />
+
+            <!-- Row 6 -->
+            <Button Content="log" Style="{StaticResource CalcButton}" />
+            <Button Content="1" Style="{StaticResource CalcButton}" />
+            <Button Content="2" Style="{StaticResource CalcButton}" />
+            <Button Content="3" Style="{StaticResource CalcButton}" />
+            <Button Content="+" Style="{StaticResource CalcButton}" />
+
+            <!-- Row 7 -->
+            <Button Content="ln" Style="{StaticResource CalcButton}" />
+            <Button Content="±" Style="{StaticResource CalcButton}" />
+            <Button Content="0" Style="{StaticResource CalcButton}" />
+            <Button Content="." Style="{StaticResource CalcButton}" />
+            <Button Content="=" 
+            Style="{StaticResource CalcButton}" 
+            Background="#FFCE47" 
+            Foreground="Black" 
+            FontWeight="Bold" />
+        </UniformGrid>
+    </Grid>
+</Window>
